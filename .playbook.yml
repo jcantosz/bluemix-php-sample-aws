@@ -17,4 +17,7 @@
       ecs_cluster:
         name: "{{ cluster_name }}"
         state: present
-      register: task_output
+      register: result
+
+    - debug:
+      var: result
