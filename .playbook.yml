@@ -7,7 +7,7 @@
     app_name: "{{ lookup('env','APP_NAME') }}"
     s3_bucket: "{{ lookup('env', 'S3_BUCKET') | default(app_name,true) }}"
     region: "{{ lookup('env', 'AWS_DEFAULT_REGION') | default('us-west-2', true) }}"
-    cluster_name: "{{ lookup('env', CLUSTER_NAME) | default('new_cluster', true) }}"
+    cluster_name: "{{ lookup('env', 'CLUSTER_NAME') | default('new_cluster', true) }}"
 
   tasks:
     # ------------------------------------------------------------
