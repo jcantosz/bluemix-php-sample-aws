@@ -18,6 +18,7 @@
       ecs_cluster:
         name: "{{ cluster_name }}"
         state: present
+        region: "{{ region }}"
       register: result
 
     - debug: msg="{{ result }}"
