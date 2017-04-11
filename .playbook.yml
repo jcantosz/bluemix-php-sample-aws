@@ -13,11 +13,11 @@
     # ------------------------------------------------------------
     # Create an ECS Cluster
     # ---
+    # http://docs.ansible.com/ansible/ecs_service_module.html
     - name: Wait for register
       ecs_cluster:
         name: "{{ cluster_name }}"
         state: present
       register: result
 
-    - debug:
-      var: result
+    - debug: msg="{{ result }}"
